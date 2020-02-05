@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <style>
+    .container {
+      position: relative;
+    }
+    .flex-container {
+      background-color: #ffffff;
+      position:relative;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .flex-container__square {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .flex-container__square img {
+      height: 100%;
+      width: auto;
+    }
+    .flex-container__square a:hover {
+      object-fit: cover;
+      transition: all .4s ease;
+      opacity: .4;
+    }
+
+    .overlay {
+      top: 30px;
+      left: 30px;
+      position:absolute;
+      color: white;
+      font-size: 1.8vw;
+      
+    }
+
+</style>
+</head>
+<body>
+  <div class="container">
+<div class="flex-container">
+
+  <div class="flex-container__square">
+      <a class="pichover" href="1">
+      <picture>
+        <source srcset="http://transitbranding.com/prod1/wp-content/uploads/2020/02/Boulder-Colorado-Hop-Bus.jpg 1200w" media="(min-width: 1200px)">
+        <source srcset="http://transitbranding.com/prod1/wp-content/uploads/2020/02/Boulder-Colorado-Hop-Bus.jpg 640w" media="(min-width: 640px)">
+        <img srcset="http://transitbranding.com/prod1/wp-content/uploads/2020/02/Boulder-Colorado-Hop-Bus.jpg 300w" alt="Hop Bus Cyclist">
+    </picture>
+    <div class="overlay">01</div>
+    </a>   
+  </div>
+
+  <div class="flex-container__square">
+    <div class="flex-container">
+      <div class="flex-container__square flex-container__square-inner">
+        
+        <a class="pichover" href="2">
+          <picture>
+            <source srcset="http://transitbranding.com/prod1/wp-content/uploads/2020/02/Boulder-Colorado-Hop-Bus.jpg 1200w" media="(min-width: 1200px)">
+              <source srcset="http://transitbranding.com/prod1/wp-content/uploads/2020/02/Boulder-Colorado-Hop-Bus.jpg 640w" media="(min-width: 640px)">
+              <img srcset="http://transitbranding.com/prod1/wp-content/uploads/2020/02/Boulder-Colorado-Hop-Bus.jpg 300w" alt="Hop Bus Cyclist">
+        </picture>
+        <div class="overlay">02</div>
+        </a>
+
+      </div>
+      <div class="flex-container__square flex-container__square-inner">
+        <a class="pichover" href="3">
+          <picture>
+            <source srcset="http://transitbranding.com/prod1/wp-content/uploads/2020/01/Square-Studio-Six-Branding.jpg 1200w" media="(min-width: 1200px)">
+              <source srcset="http://transitbranding.com/prod1/wp-content/uploads/2020/01/Square-Studio-Six-Branding.jpg 640w" media="(min-width: 640px)">
+              <img srcset="http://transitbranding.com/prod1/wp-content/uploads/2020/01/Square-Studio-Six-Branding.jpg 300w" alt="Hop Bus Cyclist">
+        </picture><div class="overlay">03</div>
+        </a>
+      </div>
+      <div class="flex-container__square flex-container__square-inner">
+        <a class="pichover" href="4">
+          <picture>
+            <source srcset="http://transitbranding.com/prod1/wp-content/uploads/2020/01/Winter-Park-Transit-Marker.jpg 1200w" media="(min-width: 1200px)">
+              <source srcset="http://transitbranding.com/prod1/wp-content/uploads/2020/01/Winter-Park-Transit-Marker.jpg 640w" media="(min-width: 640px)">
+              <img srcset="http://transitbranding.com/prod1/wp-content/uploads/2020/01/Winter-Park-Transit-Marker.jpg 300w" alt="Hop Bus Cyclist">
+        </picture><div class="overlay">04</div>
+        </a>
+      </div>
+      <div class="flex-container__square flex-container__square-inner">
+        <a class="pichover" href="5">
+          <picture>
+            <source srcset="http://transitbranding.com/prod1/wp-content/uploads/2020/01/Winter-Park-Transit-Marker.jpg 1200w" media="(min-width: 1200px)">
+              <source srcset="http://transitbranding.com/prod1/wp-content/uploads/2020/01/Winter-Park-Transit-Marker.jpg 640w" media="(min-width: 640px)">
+              <img srcset="http://transitbranding.com/prod1/wp-content/uploads/2020/01/Winter-Park-Transit-Marker.jpg 300w" alt="Hop Bus Cyclist">
+        </picture>
+        <div class="overlay">05</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>
+  function reportWindowSize() {
+    const windowWidth = window.innerWidth;
+    squareWidth = windowWidth / 2;
+    const innerSquareWidth = squareWidth / 2;
+    $('.flex-container__square').css('width', squareWidth );
+    $('.flex-container__square').css('height', squareWidth );
+    $('.flex-container__square-inner').css('width', innerSquareWidth );
+    $('.flex-container__square-inner').css('height', innerSquareWidth );
+  }
+  window.onresize = reportWindowSize;
+  reportWindowSize();
+</script>
+</body>
+</html>
